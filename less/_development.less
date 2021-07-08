@@ -1,0 +1,68 @@
+@import "mix.less";
+
+.development {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 200px;
+    height: 293px;
+    opacity: 0.38;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url("../img/development__fon1.png");
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 666px;
+    height: 526px;
+    background-color: #f6ae48;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url("../img/development__fon.png");
+    z-index: 1;
+
+  }
+
+  &__wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  &__desc {}
+
+  &__img {
+    &--google {}
+
+    &--yandex {}
+  }
+
+  &__subtitle {}
+
+  &__title {
+    margin: 87px 0 77px 130px;
+    font-family: 'Parangon 530 C';
+    .mixs (50px, 30px, 400);
+    color: #ffffff;
+    z-index: 3;
+
+
+  }
+
+}

@@ -1,0 +1,50 @@
+@import "mix.less";
+
+.about {
+  display: flex;
+  position: relative;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-image: url("../img/about__fon.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 0;
+  color: #ffffff;
+
+  &::after {
+    content: " ";
+    background-color: #757697;
+    opacity: 0.65;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 6;
+  }
+
+  &__text {
+    max-width: 940px;
+    margin: 0 0 160px 0;
+    font-family: 'Helvetica Neue Cyr';
+    font-size: 24px;
+    line-height: 36px;
+    z-index: 7;
+  }
+
+  &__title {
+    margin: 122px 0 65px 0;
+    width: 100%;
+    font-family: "exo", Arial, sans-serif;
+    text-transform: uppercase;
+    .mixs (50px, 48px, 700);
+    z-index: 7;
+  }
+}

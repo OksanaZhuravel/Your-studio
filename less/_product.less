@@ -5,7 +5,7 @@
   flex-flow: column wrap;
   justify-content: flex-start;
   width: 399px;
-  min-height: 344px;
+  min-height: 399px;
   position: relative;
 
   &::after {
@@ -14,7 +14,7 @@
     left: 0;
     top: 0;
     width: 399px;
-    height: 375px;
+    height: 399px;
     border-radius: 5px;
   }
 
@@ -39,7 +39,7 @@
 
     & .product__link {
       display: block;
-      z-index: 5;
+      z-index: 4;
     }
 
     & .product__text {
@@ -58,6 +58,7 @@
     align-self: center;
     text-align: left;
     position: relative;
+    box-sizing: border-box;
 
     &::after {
       content: "";
@@ -75,27 +76,26 @@
   }
 
   &__item {
+    box-sizing: border-box;
     width: 131px;
     padding: 4px;
-    border: 2.1px solid #ffffff;
+    border: 2px solid #ffffff;
     font-family: 'Myriad Pro';
     font-size: 18px;
     line-height: 48px;
     color: #ffffff;
-
-
   }
 
   &__text {
     margin: 0;
     max-width: 395px;
-    z-index: 7;
+    z-index: 5;
   }
 
   &__title {
     font-size: 20.5px;
     font-weight: 700;
-    z-index: 7;
+    z-index: 5;
     margin: 0 0 15px 0;
 
     &::before {
