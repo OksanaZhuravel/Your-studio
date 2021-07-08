@@ -1,0 +1,49 @@
+@import "mix.less";
+
+.specialization {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+
+  &__wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 251px 0;
+    padding: 0;
+  }
+
+  &__product {
+    box-sizing: border-box;
+    padding: 13px 24px 21px 25px;
+  }
+
+  &__text {
+    max-width: 765px;
+    margin: 173px 210px 212px 0;
+    opacity: 0.8;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      content: "WE";
+      display: block;
+      position: absolute;
+      top: 231px;
+      left: 447px;
+      opacity: 0.18;
+      font-family: 'Tahoma';
+      .mixs (340px, 30px, 700);
+      color: #c1c1c1;
+    }
+  }
+
+  &__title {
+    margin: 218px 222px 0 128px;
+    font-family: 'Helvetica Neue Cyr';
+    .mixs (48px, 30px, 700);
+  }
+}

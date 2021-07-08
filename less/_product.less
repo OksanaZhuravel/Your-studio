@@ -1,0 +1,134 @@
+@import "mix.less";
+
+.product {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  width: 399px;
+  min-height: 344px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 399px;
+    height: 375px;
+    border-radius: 5px;
+  }
+
+  &:active {
+    &::after {
+      background-color: #631bb4;
+    }
+
+    & .product__text {
+      color: #631bb4;
+    }
+
+    & .product__title {
+      color: #631bb4;
+    }
+  }
+
+  &:hover {
+    &::after {
+      background-color: #f6ae48;
+    }
+
+    & .product__link {
+      display: block;
+      z-index: 5;
+    }
+
+    & .product__text {
+      color: #ffffff;
+    }
+
+    & .product__title {
+      color: #ffffff;
+    }
+  }
+
+  &__link {
+    display: none;
+    width: 100%;
+    text-decoration: none;
+    align-self: center;
+    text-align: left;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-image: url("../img/rightarrow.svg");
+    }
+  }
+
+  &__item {
+    width: 131px;
+    padding: 4px;
+    border: 2.1px solid #ffffff;
+    font-family: 'Myriad Pro';
+    font-size: 18px;
+    line-height: 48px;
+    color: #ffffff;
+
+
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 395px;
+    z-index: 7;
+  }
+
+  &__title {
+    font-size: 20.5px;
+    font-weight: 700;
+    z-index: 7;
+    margin: 0 0 15px 0;
+
+    &::before {
+      content: "";
+      display: block;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      margin: 12px 0 12px 0;
+    }
+
+    &--promotion {
+      &::before {
+        width: 28px;
+        height: 45px;
+        background-image: url("../img/mobile.png");
+      }
+    }
+
+    &--start {
+      &::before {
+        width: 30px;
+        height: 58px;
+        background-image: url("../img/rocket.png");
+      }
+    }
+
+    &--support {
+      &::before {
+        width: 54px;
+        height: 44px;
+        background-image: url("../img/lifeline.png");
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@
   width: 1500px;
   margin: 0 auto;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 15.4px;
   line-height: 25px;
   font-weight: 400;
@@ -76,7 +76,8 @@ input[type="radio"].visually-hidden {
   margin: 0 59px 105px 0;
 }
 .header__navigation {
-  margin: 41px 0 37px 0;
+  margin: 30px 0 30px 0;
+  padding: 0 93px 0 0;
 }
 .header__text {
   z-index: 3;
@@ -124,31 +125,19 @@ input[type="radio"].visually-hidden {
   z-index: 1;
 }
 .navigation {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
   background-color: #ffffff;
 }
 .navigation__item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0 17px 0 22px;
-  list-style-type: none;
+  margin: 0 40px 0 0;
   position: relative;
 }
 .navigation__link {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  margin: 0 0 5px 0;
+  text-decoration: none;
   font-size: 30px;
   line-height: 30px;
   letter-spacing: 0.05em;
   color: #000000;
   border-bottom: 2px solid transparent;
-  text-decoration: none;
 }
 .navigation__link:active {
   color: #631bb4;
@@ -159,6 +148,10 @@ input[type="radio"].visually-hidden {
   border-color: #f6ae48;
 }
 .navigation__list {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  justify-content: flex-end;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -280,4 +273,153 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   letter-spacing: 0.05em;
   color: #ffffff;
+}
+.specialization {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+}
+.specialization__wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 251px 0;
+  padding: 0;
+}
+.specialization__product {
+  box-sizing: border-box;
+  padding: 13px 24px 21px 25px;
+}
+.specialization__text {
+  max-width: 765px;
+  margin: 173px 210px 212px 0;
+  opacity: 0.8;
+  font-size: 20px;
+  line-height: 30px;
+}
+.specialization__text::after {
+  content: "WE";
+  display: block;
+  position: absolute;
+  top: 231px;
+  left: 447px;
+  opacity: 0.18;
+  font-family: 'Tahoma';
+  font-size: 340px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #c1c1c1;
+}
+.specialization__title {
+  margin: 218px 222px 0 128px;
+  font-family: 'Helvetica Neue Cyr';
+  font-size: 48px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.product {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  width: 399px;
+  min-height: 344px;
+  position: relative;
+}
+.product::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 399px;
+  height: 375px;
+  border-radius: 5px;
+}
+.product:active::after {
+  background-color: #631bb4;
+}
+.product:active .product__text {
+  color: #631bb4;
+}
+.product:active .product__title {
+  color: #631bb4;
+}
+.product:hover::after {
+  background-color: #f6ae48;
+}
+.product:hover .product__link {
+  display: block;
+  z-index: 5;
+}
+.product:hover .product__text {
+  color: #ffffff;
+}
+.product:hover .product__title {
+  color: #ffffff;
+}
+.product__link {
+  display: none;
+  width: 100%;
+  text-decoration: none;
+  align-self: center;
+  text-align: left;
+  position: relative;
+}
+.product__link::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("../img/rightarrow.svg");
+}
+.product__item {
+  width: 131px;
+  padding: 4px;
+  border: 2.1px solid #ffffff;
+  font-family: 'Myriad Pro';
+  font-size: 18px;
+  line-height: 48px;
+  color: #ffffff;
+}
+.product__text {
+  margin: 0;
+  max-width: 395px;
+  z-index: 7;
+}
+.product__title {
+  font-size: 20.5px;
+  font-weight: 700;
+  z-index: 7;
+  margin: 0 0 15px 0;
+}
+.product__title::before {
+  content: "";
+  display: block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin: 12px 0 12px 0;
+}
+.product__title--promotion::before {
+  width: 28px;
+  height: 45px;
+  background-image: url("../img/mobile.png");
+}
+.product__title--start::before {
+  width: 30px;
+  height: 58px;
+  background-image: url("../img/rocket.png");
+}
+.product__title--support::before {
+  width: 54px;
+  height: 44px;
+  background-image: url("../img/lifeline.png");
 }
