@@ -5,6 +5,7 @@
   display: flex;
   flex-flow: column wrap;
   position: relative;
+  z-index: 0;
 
   &::before {
     content: "";
@@ -43,26 +44,73 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    z-index: 3;
   }
 
-  &__desc {}
+  &__desc {
+    margin: 0 0 203px 200px;
+    max-width: 565px;
+    font-size: 24px;
+    line-height: 48px;
+    position: relative;
+    box-sizing: border-box;
 
-  &__img {
-    &--google {}
+    &::after {
+      content: "";
+      display: block;
+      width: 205px;
+      height: 213px;
+      position: absolute;
+      top: 130px;
+      left: 553px;
+      margin: 0 0 0 187px;
+      box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.3);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-image: url("../img/yandex__fon.png");
+    }
 
-    &--yandex {}
+    &::before {
+      content: "";
+      display: block;
+      width: 205px;
+      height: 213px;
+      position: absolute;
+      top: -145px;
+      left: 553px;
+      margin: 0 0 0 187px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-image: url("../img/google__fon.png");
+    }
   }
 
-  &__subtitle {}
+  &__subtitle {
+    margin: 224px 0 45px 202px;
+    font-family: 'Parangon 530 C';
+    font-size: 36px;
+    line-height: 72px;
+    font-weight: 400;
+
+    &::after {
+      content: "BE THE FIRST";
+      display: block;
+      position: absolute;
+      top: 750px;
+      left: 146px;
+      opacity: 0.18;
+      font-family: "Tahoma";
+      .mixs(79.6px, 33px, 700);
+    }
+  }
 
   &__title {
     margin: 87px 0 77px 130px;
-    font-family: 'Parangon 530 C';
+    font-family: "Parangon 530 C";
     .mixs (50px, 30px, 400);
     color: #ffffff;
     z-index: 3;
-
-
   }
-
 }
