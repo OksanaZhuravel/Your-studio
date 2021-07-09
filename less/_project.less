@@ -1,0 +1,157 @@
+@import "mix.less";
+
+
+.project {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  background-color: #303263;
+  text-align: center;
+
+  &__wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.83;
+    background-color: #ffffff;
+  }
+
+  &__title {
+    width: 100%;
+    position: relative;
+    margin: 46px 0 46px 0;
+    font-family: 'Parangon 530 C';
+    font-size: 36px;
+    line-height: 72px;
+    color: #ffffff;
+
+    &::after {
+      content: "OUR PROJECTS";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 340px;
+      opacity: 0.34;
+      font-family: "Tahoma";
+      .mixs(96.4px, 60px, 700);
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-decoration: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    &::after {
+      content: " ";
+      background-color: #f6ae48;
+      opacity: 0.83;
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    &:hover {
+      &::after {
+        display: block;
+      }
+
+      & .project__item {
+        visibility: visible;
+      }
+    }
+
+    &--antekhnika {
+      width: 767px;
+      height: 426px;
+      background-image: url("../img/antekhnika.png");
+    }
+
+    &--expertise {
+      width: 731px;
+      height: 426px;
+      background-image: url("../img/expertise.png");
+    }
+
+    &--incar {
+      width: 365px;
+      height: 345px;
+      margin-right: 10px;
+      background-image: url("../img/incar.png");
+    }
+
+    &--carservice {
+      width: 365px;
+      height: 345px;
+      margin-right: 10px;
+      background-image: url("../img/carservice.png");
+    }
+
+    &--festival {
+      width: 365px;
+      height: 345px;
+      margin-right: 10px;
+      background-image: url("../img/festival.png");
+    }
+
+    &--rostekh {
+      width: 365px;
+      height: 345px;
+      background-image: url("../img/rostekh.png");
+    }
+  }
+
+  &__item {
+    display: block;
+    visibility: hidden;
+    font-family: "exo", Arial, sans-serif;
+    .mixs(30px, 30px, 600);
+    color: #ffffff;
+    z-index: 2;
+
+    &--carservice {
+      width: 100%;
+      margin: 0 0 18px 0;
+      font-size: 72px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 240px;
+    padding: 14px;
+    margin: 27px 0 27px 0;
+    word-break: break-all;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #8c8ec0;
+    text-decoration: none;
+    border-radius: 25px;
+
+    &:hover {
+      color: #8c8ec0;
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: #000000;
+      background-color: #635c5c;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+}

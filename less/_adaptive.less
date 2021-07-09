@@ -1,0 +1,78 @@
+@import "mix.less";
+
+.adaptive {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #ffffff;
+  position: relative;
+
+  &__wrap {
+    position: absolute;
+    top: 163px;
+    right: 0;
+    display: flex;
+    flex-flow: row column;
+    align-items: flex-end;
+  }
+
+  &__fon {
+    display: block;
+    border: 2px solid #00b9e7;
+
+    &--mobile {
+      width: 110px;
+      height: 226px;
+      margin: 0 60px 0 0;
+      background-color: rgba(28, 28, 28, 0.0);
+
+    }
+
+    &--tablet {
+      width: 242px;
+      height: 344px;
+      margin: 0 92px 0 0;
+      background-color: rgba(24, 25, 25, 0.0);
+
+    }
+
+    &--desktop {
+      width: 152px;
+      height: 409px;
+      background-color: rgba(100, 100, 191, 0.0);
+
+    }
+
+  }
+
+  &__text {
+    max-width: 488px;
+    margin: 0 107px 169px 200px;
+    font-family: 'Helvetica Neue Cyr';
+    font-size: 24px;
+    line-height: 48px;
+  }
+
+  &__title {
+    width: 100%;
+    position: relative;
+    margin: 219px 0 5px 202px;
+    font-family: 'Parangon 530 C';
+    font-size: 36px;
+    line-height: 72px;
+    font-weight: 400;
+    color: #060606;
+
+    &::after {
+      content: "ADAPTATE";
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: -50px;
+      opacity: 0.18;
+      font-family: "Tahoma";
+      .mixs(77.7px, 32px, 700);
+      color: #000000;
+    }
+  }
+}
