@@ -1,0 +1,137 @@
+@import "mix.less";
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+
+  &__btn {
+    display: block;
+    width: 143px;
+    height: 44px;
+    word-break: break-all;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f6ae48;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-family: 'Parangon 530 C';
+    font-size: 14px;
+    color: #ffffff;
+    border: none;
+    margin: 0 0 0 59px;
+
+    &:hover {
+      color: #00b9e7;
+    }
+
+    &:active {
+      color: #631bb4;
+    }
+
+    &--show {
+      animation-name: show;
+      animation-duration: 0.6s;
+    }
+  }
+
+  &__style {
+    box-sizing: border-box;
+    width: 307px;
+    height: 44px;
+    border: 2.2px solid #ffffff;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 0 23px;
+    outline: none;
+    background-color: transparent;
+    color: #18cbf8;
+
+    &:hover {
+      border: 2.2px solid #f6ae48;
+
+      &::placeholder {
+        font-family: Arial, sans-serif;
+        .mixs (18px, 30px, 400);
+        color: #f6ae48;
+      }
+    }
+
+    &::placeholder {
+      font-family: Arial, sans-serif;
+      .mixs (18px, 30px, 400);
+      color: #ffffff;
+    }
+
+    &--email {
+      width: 614px;
+    }
+
+    &--message {
+      box-sizing: border-box;
+      width: 614px;
+      height: 266px;
+      resize: none;
+      padding-top: 17px;
+      margin: 0 0 14px 0;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+  }
+}
+
+@keyframes show {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-15px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(15px);
+  }
+}
+
+// @media (max-width: 480px) {
+//   .form {
+//     &__btn {
+//       width: 120px;
+//       height: auto;
+//     }
+
+//     &__inner {
+//       flex-flow: column wrap;
+//       justify-content: center;
+//     }
+
+//     &__style {
+//       width: auto;
+//       height: auto;
+
+//       &--message {
+//         width: auto;
+//         height: 80px;
+//       }
+
+//       &--name {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+// }
