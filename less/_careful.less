@@ -1,0 +1,53 @@
+@import "mix.less";
+
+.careful {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #ffffff;
+  position: relative;
+
+  &__text {
+    max-width: 567px;
+    margin: 0 38px 249px 200px;
+    font-size: 24px;
+    line-height: 48px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 563px;
+      height: 460px;
+      position: absolute;
+      top: 130px;
+      right: 105px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-image: url("../img/careful__fon.png");
+    }
+  }
+
+  &__title {
+    width: 100%;
+    position: relative;
+    margin: 179px 0 30px 199px;
+    font-family: 'Parangon 530 C';
+    font-size: 36px;
+    line-height: 72px;
+    font-weight: 400;
+    color: #060606;
+
+    &::after {
+      content: "BE CAREFUL";
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: -50px;
+      opacity: 0.18;
+      font-family: "Tahoma";
+      .mixs(72px, 30px, 700);
+      color: #000000;
+    }
+  }
+}

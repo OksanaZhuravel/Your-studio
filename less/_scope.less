@@ -1,0 +1,73 @@
+@import "mix.less";
+
+.scope {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  width: 465px;
+  position: relative;
+  z-index: 3;
+  text-align: left;
+
+  &__text {
+    max-width: 376px;
+    margin: 0 25px 0 0;
+    font-size: 18px;
+    line-height: 30px;
+
+    &--program {
+      max-width: 402px;
+    }
+
+    &--conditions {
+      max-width: 450px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0 90px;
+    font-family: 'Parangon 530 C';
+    font-size: 30px;
+    line-height: 72px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+
+    &--program {
+      &::before {
+        width: 69px;
+        height: 48px;
+        background-image: url("../img/trade__img1.png");
+      }
+    }
+
+    &--process {
+      margin-left: 50px;
+
+      &::before {
+        width: 67px;
+        height: 67px;
+        left: -25px;
+        background-image: url("../img/trade__img2.png");
+      }
+    }
+
+    &--conditions {
+      &::before {
+        width: 64px;
+        height: 49px;
+        top: 20px;
+        background-image: url("../img/trade__img3.png");
+      }
+    }
+
+  }
+}

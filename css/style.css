@@ -1011,3 +1011,182 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   color: #000000;
 }
+.trade {
+  display: flex;
+  position: relative;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  min-height: 676px;
+  padding: 0 50px 0 50px;
+  box-sizing: border-box;
+  object-fit: cover;
+  background-image: url("../img/trade__fon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+  color: #ffffff;
+}
+.trade::after {
+  content: " ";
+  opacity: 0.52;
+  background-color: #000000;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.trade__wrap {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 47px 0;
+}
+.trade__title {
+  margin: 45px 0 65px 0;
+  width: 100%;
+  font-family: 'Parangon 530 C';
+  font-size: 48px;
+  line-height: 72px;
+  z-index: 3;
+}
+.trade__btn {
+  display: block;
+  width: 330px;
+  padding: 6px;
+  margin: 0 0 47px 0;
+  word-break: break-all;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f6ae48;
+  border-radius: 20px;
+  text-decoration: none;
+  z-index: 3;
+  color: #ffffff;
+}
+.trade__btn:hover {
+  color: #8c8ec0;
+  background-color: #774c0f;
+}
+.trade__btn:active {
+  color: #000000;
+  background-color: #635c5c;
+}
+.trade__text {
+  font-family: 'Parangon 530 C';
+  font-size: 24px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+.scope {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  width: 465px;
+  position: relative;
+  z-index: 3;
+  text-align: left;
+}
+.scope__text {
+  max-width: 376px;
+  margin: 0 25px 0 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+.scope__text--program {
+  max-width: 402px;
+}
+.scope__text--conditions {
+  max-width: 450px;
+}
+.scope__title {
+  margin: 0 0 0 90px;
+  font-family: 'Parangon 530 C';
+  font-size: 30px;
+  line-height: 72px;
+}
+.scope__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.scope__title--program::before {
+  width: 69px;
+  height: 48px;
+  background-image: url("../img/trade__img1.png");
+}
+.scope__title--process {
+  margin-left: 50px;
+}
+.scope__title--process::before {
+  width: 67px;
+  height: 67px;
+  left: -25px;
+  background-image: url("../img/trade__img2.png");
+}
+.scope__title--conditions::before {
+  width: 64px;
+  height: 49px;
+  top: 20px;
+  background-image: url("../img/trade__img3.png");
+}
+.careful {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #ffffff;
+  position: relative;
+}
+.careful__text {
+  max-width: 567px;
+  margin: 0 38px 249px 200px;
+  font-size: 24px;
+  line-height: 48px;
+}
+.careful__text::before {
+  content: "";
+  display: block;
+  width: 563px;
+  height: 460px;
+  position: absolute;
+  top: 130px;
+  right: 105px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("../img/careful__fon.png");
+}
+.careful__title {
+  width: 100%;
+  position: relative;
+  margin: 179px 0 30px 199px;
+  font-family: 'Parangon 530 C';
+  font-size: 36px;
+  line-height: 72px;
+  font-weight: 400;
+  color: #060606;
+}
+.careful__title::after {
+  content: "BE CAREFUL";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: -50px;
+  opacity: 0.18;
+  font-family: "Tahoma";
+  font-size: 72px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+}
