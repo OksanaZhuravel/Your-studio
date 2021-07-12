@@ -12,13 +12,13 @@
     top: 163px;
     right: 0;
     display: flex;
-    flex-flow: row column;
     align-items: flex-end;
   }
 
   &__fon {
     display: block;
     border: 2px solid #00b9e7;
+    border-radius: 25px;
 
     &--mobile {
       width: 110px;
@@ -26,23 +26,104 @@
       margin: 0 60px 0 0;
       background-color: rgba(28, 28, 28, 0.0);
 
+      &::after {
+        content: "";
+        display: block;
+        width: 101px;
+        height: 174px;
+        margin: 26px 4px 26px 3px;
+        object-fit: contain;
+        background-image: url("../img/adaptability__fon1.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid #ffffff;
+      }
     }
 
     &--tablet {
+      position: relative;
       width: 242px;
       height: 344px;
       margin: 0 92px 0 0;
       background-color: rgba(24, 25, 25, 0.0);
 
+      &::after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        bottom: 3px;
+        left: 110px;
+        background-color: rgba(24, 25, 25, 0.0);
+        border: 3px solid #00b9e7;
+        border-radius: 50%;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 211px;
+        height: 283px;
+        margin: 31px 15px 30px 15px;
+        object-fit: contain;
+        background-image: url("../img/adaptability__fon2.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
 
     &--desktop {
+      position: relative;
       width: 152px;
       height: 409px;
       background-color: rgba(100, 100, 191, 0.0);
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 5px;
 
+      &::before {
+        content: "";
+        display: block;
+        width: 131px;
+        height: 356px;
+        margin: 26px 0 27px 21px;
+        border: 1px solid #ffffff;
+        object-fit: contain;
+        background-image: url("../img/adaptability__fon3.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 220px;
+        height: 13px;
+        position: absolute;
+        bottom: -19px;
+        left: -68px;
+        background-color: rgba(100, 100, 191, 0.0);
+        border: 2px solid #00b9e7;
+        border-right: none;
+      }
     }
 
+    &--pic {
+      position: absolute;
+      bottom: -34px;
+      right: -3px;
+      width: 221px;
+      height: 13px;
+      background-color: rgba(100, 100, 191, 0.0);
+      border: 2px solid #00b9e7;
+      border-bottom-left-radius: 100px 50px;
+      border-right: none;
+    }
   }
 
   &__text {
