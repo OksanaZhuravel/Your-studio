@@ -108,30 +108,28 @@
   }
 }
 
-// @media (max-width: 480px) {
-//   .form {
-//     &__btn {
-//       width: 120px;
-//       height: auto;
-//     }
+@media (max-width: 480px) {
+  .form {
+    justify-content: center;
 
-//     &__inner {
-//       flex-flow: column wrap;
-//       justify-content: center;
-//     }
+    &__btn {
+      margin: 15px 0;
+    }
 
-//     &__style {
-//       width: auto;
-//       height: auto;
+    &__style {
+      width: 95%;
+      height: 44px;
+      margin: 0 0 10px 0;
 
-//       &--message {
-//         width: auto;
-//         height: 80px;
-//       }
+      &--email {
+        width: 95%;
+      }
 
-//       &--name {
-//         margin-right: 0;
-//       }
-//     }
-//   }
-// }
+      &--message {
+        width: 95%;
+        height: 120px;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}

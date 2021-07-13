@@ -155,3 +155,66 @@
     font-size: 22px;
   }
 }
+
+@media (max-width: 480px) {
+  .project {
+
+    &__title {
+      margin: 50px 0 30px 0;
+      .mixs (30px, 28px, 700);
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__link {
+      background-size: contain;
+      margin: 15px 0;
+
+      &--antekhnika {
+        width: 365px;
+        height: 213px;
+      }
+
+      &--expertise {
+        width: 365px;
+        height: 213px;
+      }
+
+      &--incar {
+        margin-right: 0;
+      }
+
+      &--carservice {
+        margin-right: 0;
+      }
+
+      &--festival {
+        margin-right: 0;
+      }
+    }
+
+    &__item {
+      &--carservice {
+        font-size: 30px;
+      }
+    }
+
+    &__btn {
+      width: 180px;
+      padding: 8px;
+      margin: 10px 0 10px 0;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .project {
+    display: none;
+  }
+}

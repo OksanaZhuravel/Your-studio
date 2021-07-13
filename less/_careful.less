@@ -51,3 +51,29 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .careful {
+    text-align: center;
+
+    &__text {
+      max-width: 95%;
+      margin: 0 0 50px 0;
+      font-size: 16px;
+      line-height: 30px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__title {
+      margin: 50px 0 30px 0;
+      .mixs (30px, 28px, 700);
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
